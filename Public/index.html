@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="productTest">
+<head>
+	<title></title>
+</head>
+<body ng-controller="productController">
+
+
+
+	<input ng-model="product.name" type="text" placeholder="Enter Product Name"/>
+	<input ng-model="product.size" type="text" placeholder="Enter Product Size"/>
+	<input ng-model="product.color" type="text" placeholder="Enter Product Color"/>
+
+	<div ng-repeat="product in products">
+
+	{{ product.name }}  {{product.size}} {{product.color}}
+	</div>
+	<button ng-click="addProduct(product)">Add Product</button>
+
+
+
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/Controllers/productController.js"></script> 
+<script src="scripts/Services/productService.js"></script> 
+</body>
+</html>
